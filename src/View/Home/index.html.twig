@@ -1,5 +1,40 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+    <h1 class="display-1 text-center">Mastermind</h1>
+
+    <p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Règles du jeu
+        </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body" id="rules">
+            Sélectionner 4 billes de couleur et cliquer sur le bouton valider. Si une des billes correspond par sa couleur et sa position, un point noir apparait à droite. Si une des billes correspond par sa couleur uniquement (mais n'est pas à la bonne place), un point blanc apparait à droite. Si aucune des billes n'est correct, il n'y a rien à droite.Le but du jeu est de deviner la combinaison des 4 billes de couleur en moins de 10 coups.
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-around" id="game-container">
+        <div id="game-panel">Panel control
+        </div>
+        <div id="game-control">Some content
+        </div>
+    </div>
+
+    <div class="container-fluid" id="game-choice">
+    <form method="post">
+        <p>Cliquer sur une des couleurs pour la sélectionner : </p>
+        <div class="container d-flex justify-content-around" id="colors">
+            <input type="checkbox" value="red" name="colors">
+            <input type="checkbox" value="yellow" name="colors">
+            <input type="checkbox" value="orange" name="colors">
+            <input type="checkbox" value="green" name="colors">
+            <input type="checkbox" value="purple" name="colors">
+            <input type="checkbox" value="blue" name="colors">
+        </div>
+
+        <input id="color-choice"></input>
+        <button type="submit">Valider</button>
+    </form>
+    </div>
 {% endblock %}

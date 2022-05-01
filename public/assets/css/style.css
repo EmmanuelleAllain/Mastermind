@@ -1,0 +1,31 @@
+:root {
+    --red-ball: #f71302;
+    --yellow-ball: #f4f801;
+    --orange-ball: #ec8805;
+    --green-ball: #54cc04;
+    --purple-ball: #a409ca;
+    --blue-ball: #1c0edf;
+    --bg-color: #E5E5E5;
+    --pinker-bg-color: #F6E9E9;
+    --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+}
+
+#game-panel {
+    background-color: white;
+    width: 60vw;
+    height: 60vh;
+}
+
+#game-control {
+    background-color: white;
+    width: 30vw;
+    height: 60vh;
+}
