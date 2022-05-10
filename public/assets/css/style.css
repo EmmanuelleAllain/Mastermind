@@ -29,3 +29,8 @@
     width: 30vw;
     height: 60vh;
 }
+#colors-choice {
+    height: 30px;
+    width: 200px;
+    background-color: white;
+}

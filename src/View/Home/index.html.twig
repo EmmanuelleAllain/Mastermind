@@ -14,27 +14,28 @@
         </div>
     </div>
 
-    <div class="container-fluid d-flex justify-content-around" id="game-container">
-        <div id="game-panel">Panel control
+    <div id="game-container" class="container-fluid d-flex justify-content-around">
+        <div id="game-panel">Game
         </div>
-        <div id="game-control">Some content
+        <div id="game-control">Result
         </div>
     </div>
 
-    <div class="container-fluid" id="game-choice">
-    <form method="post">
+    <div id="game-choice" class="container-fluid">
         <p>Cliquer sur une des couleurs pour la sélectionner : </p>
-        <div class="container d-flex justify-content-around" id="colors">
-            <input type="checkbox" value="red" name="colors">
-            <input type="checkbox" value="yellow" name="colors">
-            <input type="checkbox" value="orange" name="colors">
-            <input type="checkbox" value="green" name="colors">
-            <input type="checkbox" value="purple" name="colors">
-            <input type="checkbox" value="blue" name="colors">
+        <div id="colors-box" class="container d-flex justify-content-around">
+        
+            <button id="red" name="colors">Red</button>
+            <button id="yellow" name="colors">Yellow</button>
+            <button id="orange" name="colors">Orange</button>
+            <button id="green" name="colors">Green</button>
+            <button id="purple" name="colors">Purple</button>
+            <button id="blue" name="colors">Blue</button>
         </div>
-
-        <input id="color-choice"></input>
-        <button type="submit">Valider</button>
-    </form>
+        <form metho="post">
+            <div id="colors-choice">
+            </div>
+            <button id="sendColorsChoice" type="submit">Valider</button>
+        </form>
     </div>
 {% endblock %}
