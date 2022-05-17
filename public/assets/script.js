@@ -11,36 +11,36 @@ let input = document.getElementsByTagName('input');
 
 red.addEventListener('click', function(){  
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='red'>";
+    inputColors.innerHTML += "<input type='text' id = 'red' name='red' value='red'>";
     }
 });
 
 yellow.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='yellow'>";
+    inputColors.innerHTML += "<input type='text' id = 'yellow' name='yellow' value='yellow'>";
     }
 });
 
 orange.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='orange'>";
+    inputColors.innerHTML += "<input type='text' id = 'orange' name='orange' value='orange'>";
     }
 });
 
 green.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='green'>";
+    inputColors.innerHTML += "<input type='text' id = 'green' name='green' value='green'>";
     }
 });
 
 purple.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='purple'>";
+    inputColors.innerHTML += "<input type='text' id = 'purple' name='purple' value='purple'>";
     }
 });
 
 blue.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='blue'>";
+    inputColors.innerHTML += "<input type='text' id = 'blue' name='blue' value='blue'>";
     }
 });
