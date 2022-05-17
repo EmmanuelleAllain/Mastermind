@@ -11,36 +11,36 @@ let input = document.getElementsByTagName('input');
 
 red.addEventListener('click', function(){  
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='red'" + red.id + ">";
+    inputColors.innerHTML += "<input value='red'>";
     }
 });
 
 yellow.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='yellow'" + yellow.id + ">";
+    inputColors.innerHTML += "<input value='yellow'>";
     }
 });
 
 orange.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='orange'" + orange.id + ">";
+    inputColors.innerHTML += "<input value='orange'>";
     }
 });
 
 green.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='green'" + green.id + ">";
+    inputColors.innerHTML += "<input value='green'>";
     }
 });
 
 purple.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='purple'" + purple.id + ">";
+    inputColors.innerHTML += "<input value='purple'>";
     }
 });
 
 blue.addEventListener('click', function(){
     if(input.length < 4) {
-    inputColors.innerHTML += "<input value='blue'" + blue.id + ">";
+    inputColors.innerHTML += "<input value='blue'>";
     }
 });

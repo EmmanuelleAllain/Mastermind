@@ -15,9 +15,10 @@
     </div>
 
     <div id="game-container" class="container-fluid d-flex justify-content-around">
-        <div id="game-panel">Game
+        <div id="game-panel">Game {{ adversary }}
         </div>
-        <div id="game-control">Result
+        <div id="game-control">Result {% if player is not empty %} {{ player }}{% endif %}
+
         </div>
     </div>
 
@@ -32,7 +33,7 @@
             <button id="purple" name="colors">Purple</button>
             <button id="blue" name="colors">Blue</button>
         </div>
-        <form metho="post">
+        <form method="post">
             <div id="colors-choice">
             </div>
             <button id="sendColorsChoice" type="submit">Valider</button>
