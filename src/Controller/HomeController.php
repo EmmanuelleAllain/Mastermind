@@ -6,40 +6,36 @@ class HomeController extends AbstractController
 {
     public function index(): string
     {
-        /* adversaryArray will be random after set up sessions
-        $array = [
-            'red' => 'red',
-            'yellow' => 'yellow',
-            'orange' => 'orange',
-            'green' => 'green',
-            'purple' => 'purple',
-            'blue' => 'blue'];
-        $adversaryArray = array_rand($array, 4);*/
+        $array = ['red', 'yellow','orange', 'green', 'purple','blue'];
+        $adversaryArrayKeys = array_rand($array, 4);
         $adversaryArray = [
-            'yellow' => 'yellow',
-            'orange' => 'orange',
-            'green' => 'green',
-            'red' => 'red'
+            $array[$adversaryArrayKeys[0]],
+            $array[$adversaryArrayKeys[1]],
+            $array[$adversaryArrayKeys[2]],
+            $array[$adversaryArrayKeys[3]],
         ];
-
         $playerArray = [];
         $player = '';
-        $matching = 0;
-        $similarValues = [];
+        $blackMatching = 0;
+        $whiteMatching = 0;
+
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $colors = array_map('trim', $_POST);
             $playerArray = $colors;
-            $similarValues = array_intersect($adversaryArray, $playerArray);
-            $matching = count($similarValues);
+
+            $similarValuePosition = array_intersect_assoc($adversaryArray, $playerArray);
+            $blackMatching = count($similarValuePosition);
+            $similarValue = array_intersect($adversaryArray, $playerArray);
+            $whiteMatching = count($similarValue) - $blackMatching;
             $player = implode(' ', $playerArray);
-            /* to do : manage the strict comparison between the 2 arrays */
         }
         return $this->twig->render(
             'Home/index.html.twig',
             [
             'player' => $player,
-            'matching' => $matching,
+            'blackMatching' => $blackMatching,
+            'whiteMatching' => $whiteMatching,
             ]
         );
     }

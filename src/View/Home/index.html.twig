@@ -17,11 +17,12 @@
     <div id="game-container" class="container-fluid d-flex justify-content-around">
         <div id="game-panel">
             <p>Game</p>
-            <p>{% if player is not empty %} {{ player }}{% endif %}</p>
+            <p>{{ player }}</p>
         </div>
         <div id="game-control">
             <p>Result</P>
-            <p>{% if matching is not empty %} {{ matching }}{% endif %}</p>
+            <p>nombre de pions exacts (couleur + position) :{{ blackMatching}}</p>
+            <p>nombre de pions exacts (couleur uniquement) :{{ whiteMatching}}</p>
         </div>
     </div>
 
@@ -29,17 +30,19 @@
         <p>Cliquer sur une des couleurs pour la sélectionner : </p>
         <div id="colors-box" class="container d-flex justify-content-around">
         
-            <button id="red" name="colors">Red</button>
-            <button id="yellow" name="colors">Yellow</button>
+            <button id="red" name="colors" type="submit">Red</button>
+            <button id="yellow" name="colors" type="submit">Yellow</button>
             <button id="orange" name="colors">Orange</button>
             <button id="green" name="colors">Green</button>
             <button id="purple" name="colors">Purple</button>
             <button id="blue" name="colors">Blue</button>
+        
         </div>
         <form method="post">
             <div id="colors-choice">
             </div>
             <button id="sendColorsChoice" type="submit">Valider</button>
         </form>
+        
     </div>
 {% endblock %}
