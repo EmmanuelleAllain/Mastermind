@@ -3,11 +3,10 @@
 {% block content %}
     <h1 class="display-1 text-center">Mastermind</h1>
 
-    <p>
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Règles du jeu
-        </a>
-    </p>
+    <a class="btn w-100 btn-rules" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Règles du jeu
+    </a>
+
     <div class="collapse" id="collapseExample">
         <div class="card card-body" id="rules">
             Sélectionner 4 billes de couleur et cliquer sur le bouton valider. Si une des billes correspond par sa couleur et sa position, un point noir apparait à droite. Si une des billes correspond par sa couleur uniquement (mais n'est pas à la bonne place), un point blanc apparait à droite. Si aucune des billes n'est correct, il n'y a rien à droite.Le but du jeu est de deviner la combinaison des 4 billes de couleur en moins de 10 coups.
@@ -26,22 +25,19 @@
         </div>
     </div>
 
-    <div id="game-choice" class="container-fluid">
+    <div id="game-choice" class="container-fluid d-flex flex-column align-items-center">
         <p>Cliquer sur une des couleurs pour la sélectionner : </p>
         <div id="colors-box" class="container d-flex justify-content-around">
-        
-            <button id="red" name="colors" type="submit">Red</button>
-            <button id="yellow" name="colors" type="submit">Yellow</button>
-            <button id="orange" name="colors">Orange</button>
-            <button id="green" name="colors">Green</button>
-            <button id="purple" name="colors">Purple</button>
-            <button id="blue" name="colors">Blue</button>
-        
+            <button id="red" class="p-1" name="colors">Red</button>
+            <button id="yellow" class="p-1" name="colors">Yellow</button>
+            <button id="orange" class="p-1" name="colors">Orange</button>
+            <button id="green" class="p-1" name="colors">Green</button>
+            <button id="purple" class="p-1" name="colors">Purple</button>
+            <button id="blue" class="p-1" name="colors">Blue</button>
         </div>
         <form method="post">
-            <div id="colors-choice">
-            </div>
-            <button id="sendColorsChoice" type="submit">Valider</button>
+            <div id="colors-choice"></div>
+            <button id="sendColorsChoice" class="p-1" type="submit">Valider</button>
         </form>
         
     </div>

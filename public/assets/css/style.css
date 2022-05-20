@@ -5,8 +5,9 @@
     --green-ball: #54cc04;
     --purple-ball: #a409ca;
     --blue-ball: #1c0edf;
-    --bg-color: #E5E5E5;
+    --bg-color: #DBD4D4;
     --pinker-bg-color: #F6E9E9;
+    --major-color: #710606;
     --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
         rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -18,24 +19,48 @@
     background-color: var(--bg-color);
 }
 
+h1 {
+    color: var(--major-color);
+}
+
+.btn {
+    background-color: var(--major-color);
+    color: white;
+}
+#rules {
+    background-color: var(--pinker-bg-color);
+}
+
 #game-panel {
-    background-color: white;
+    background-color: var(--pinker-bg-color);
     width: 60vw;
     height: 60vh;
 }
 
 #game-control {
-    background-color: white;
+    background-color: var(--pinker-bg-color);
     width: 30vw;
     height: 60vh;
 }
 #colors-choice {
     height: 30px;
-    width: 200px;
-    background-color: white;
+    width: 90%;
+    background-color: var(--pinker-bg-color);
 }
 
 #colors-choice {
     display: flex;
 
+}
+
+#sendColorsChoice {
+    text-align: center;
+    color: var(--pinker-bg-color);
+    background-color: var(--major-color);
+}
+
+/* use to manage player color choice*/
+input {
+    width: 25%;
+    text-align: center;
 }
