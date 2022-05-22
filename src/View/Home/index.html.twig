@@ -13,15 +13,15 @@
         </div>
     </div>
 
-    <div id="game-container" class="container-fluid d-flex justify-content-around">
-        <div id="game-panel">
-            <p>Game</p>
-            <p>{{ player }}</p>
+    <div id="game-container" class="container-fluid">
+        <div class="row">
+            <div id="game-panel" class="col-8">Game</div>
+            <div id="game-control" class="col">Result</div>
         </div>
-        <div id="game-control">
-            <p>Result</P>
-            <p>nombre de pions exacts (couleur + position) :{{ blackMatching}}</p>
-            <p>nombre de pions exacts (couleur uniquement) :{{ whiteMatching}}</p>
+        <div  class="row align-items-end">
+            <hr>
+            <div id="colors-round" class="col-8">{{ player }}</div>
+            <div class="col">{{ blackMatching}} et {{ whiteMatching}}</div>
         </div>
     </div>
 
@@ -35,7 +35,7 @@
             <button id="purple" class="p-1" name="colors">Purple</button>
             <button id="blue" class="p-1" name="colors">Blue</button>
         </div>
-        <form method="post">
+        <form method="post" class="d-flex flex-column align-items-center">
             <div id="colors-choice"></div>
             <button id="sendColorsChoice" class="p-1" type="submit">Valider</button>
         </form>

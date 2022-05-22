@@ -31,26 +31,28 @@ h1 {
     background-color: var(--pinker-bg-color);
 }
 
-#game-panel {
+#game-container {
     background-color: var(--pinker-bg-color);
+}
+
+#game-panel {
     width: 60vw;
     height: 60vh;
 }
 
 #game-control {
-    background-color: var(--pinker-bg-color);
     width: 30vw;
     height: 60vh;
+}
+
+#colors-round {
+    background-color: var(--pinker-bg-color)
 }
 #colors-choice {
     height: 30px;
     width: 90%;
-    background-color: var(--pinker-bg-color);
-}
-
-#colors-choice {
     display: flex;
-
+    background-color: var(--pinker-bg-color);
 }
 
 #sendColorsChoice {
