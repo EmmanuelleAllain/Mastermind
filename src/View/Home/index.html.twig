@@ -27,6 +27,12 @@
             <div class="col">
                 noir : {{ sessions.results[loop.index0].0 }} | blanc : {{ sessions.results[loop.index0].1 }}
             </div>
+            {% if sessions.results[loop.index0].0 == 4 and loop.index <=10 %}
+            <div>Bravo, tu as gagné !</div>
+            {% endif %}
+            {% if sessions.results[loop.index0].0 != 4 and loop.index ==10 %}
+            <div>Désolé, tu as perdu...</div>
+            {% endif %}
         {% endfor %} 
         </div>
     </div>
