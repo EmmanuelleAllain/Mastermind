@@ -18,10 +18,16 @@
             <div id="game-panel" class="col-8">Game</div>
             <div id="game-control" class="col">Result</div>
         </div>
+        {% for color in sessions.rounds %}
         <div  class="row align-items-end">
             <hr>
-            <div id="colors-round" class="col-8">{{ player }}</div>
-            <div class="col">{{ blackMatching}} et {{ whiteMatching}}</div>
+            <div id="colors-round" class="col-8">
+                Tour {{ loop.index }} : {{ color.0 }} | {{ color.1 }} | {{ color.2 }} | {{ color.3 }}
+            </div>
+            <div class="col">
+                noir : {{ sessions.results[loop.index0].0 }} | blanc : {{ sessions.results[loop.index0].1 }}
+            </div>
+        {% endfor %} 
         </div>
     </div>
 
@@ -37,8 +43,11 @@
         </div>
         <form method="post" class="d-flex flex-column align-items-center">
             <div id="colors-choice"></div>
-            <button id="sendColorsChoice" class="p-1" type="submit">Valider</button>
+            <button id="sendColorsChoice" class="btn p-1" name="submit" type="submit">Valider</button>
+            <div class="d-flex justify-content-center">
+                <button id="restart-game" class="btn p-2 m-2" name="restart" value="restartGame">Recommencer une partie</button>
+            </div>
         </form>
-        
     </div>
+
 {% endblock %}
